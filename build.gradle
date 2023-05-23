@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        maven {
+            url 'https://sdk.wdyxgames.com/nexus/repository/sdk-public/'
+        }
+        maven {
+            url 'https://artifact.bytedance.com/repository/Volcengine/'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.1'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://sdk.wdyxgames.com/nexus/repository/sdk-public/'
+        }
+        maven {
+            url 'https://artifact.bytedance.com/repository/Volcengine/'
+        }
+    }
+}
