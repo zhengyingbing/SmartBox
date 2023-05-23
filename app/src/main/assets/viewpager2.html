@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>ViewPager2介绍</title>
+</head>
+
+<body>
+    <div>
+        <p>ViewPager2是Androidx库中的一个组件，可实现滑动切换页面的功能，是ViewPager的升级版，默认缓存2个页面数据（懒加载）</p>
+    </div>
+    <div>
+        <p>viewpager2继承自ViewGroup，使用RecyclerView的Adapter</p>
+    </div>
+    <div>
+        <p><b>与ViewPager的区别：</b></p>
+    </div>
+    <div>
+        <p><font color="#666666">1.支持垂直滑动，ViewPager不支持</font></p>
+        <p><font color="#666666">2.更好的性能和更少的内存占用</font></p>
+        <p><font color="#666666">3.更灵活，可使用FragmentStateAdapter或RecyclerViewAdapter</font></p>
+        <p><font color="#666666">4.支持更多动画效果，淡入淡出旋转等</font></p>
+
+    </div>
+    <div>
+        <p><b>组合：</b></p>
+        <p>ViewPager2 + Tablayout，做底部页面切换；ViewPager2 + 定时器，做Banner轮播图</p>
+    </div>
+    <div>
+        <p><b>优点：</b></p>
+        <p>支持垂直滑动，支持RecyclerView相关功能，支持多个PageTransformer，支持DiffUtil、局部刷新和item动画</p>
+    </div>
+    <div>
+        <p><b>缺点：</b></p>
+        <p>兼容性，只支持Androidx库，不支持斜向或自定义方向的布局，代码复杂度提高，向下兼容需做额外处理，在大量数据的情况下，需要优化保证流畅滑动</p>
+    </div>
+    <div>
+        <p><b>常用api：</b></p>
+    </div>
+    <div>
+        <p><font color="#666666">notefyDataSetChannged() //刷新</font></p>
+        <p><font color="#666666">setUserInputEnabled() //禁止手动滑动</font></p>
+        <p><font color="#666666">setCurrentItem(n, false) //跳转到指定页面，false不带滚动动画</font></p>
+        <p><font color="#666666">setCurrentItem(n) //跳转到指定页面，带滚动动画</font></p>
+        <p><font color="#666666">addItemDecoration() //设置分割线，同RecyclerView</font></p>
+        <p><font color="#666666">setOffscreenPageLimit() //设置预加载数量</font></p>
+        <p><font color="#666666">setOrientation(ViewPager2.ORIENTATION_HORIZONTAL) //设置方向</font></p>
+        <p><font color="#666666">fakeDragBy(offsetPx) //代码模拟用户滑动页面，支持通过编程方式滚动</font></p>
+        <p><font color="#666666">setPageTransformer() //设置滚动动画，参数CompositePageTransformer，PageTransformer</font></p>
+    </div>
+    <div>
+        <p><b>使用：</b></p>
+    </div>
+    <div>
+        <p><font color="#666666">implementation 'androidx.viewpager2:viewpager2:1.0.0'</font></p>
+        <p><font color="#666666">implementation 'androidx.recyclerview:recycleview:1.1.0'</font></p>
+    </div>
+    <div>
+        <p><b>已完结</b></p>
+    </div>
+</body>
+</html>

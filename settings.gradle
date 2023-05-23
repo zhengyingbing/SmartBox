@@ -1,0 +1,6 @@
+rootProject.name = "SmartBox"
+include ':app'
+//include ':core'
+//include ':tab1'
+//include ':brouter-annotation'
+//include ':brouter-compiler'

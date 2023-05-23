@@ -1,0 +1,76 @@
+package com.bing.box.recyclerview;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bing.box.R;
+import com.bing.box.bean.Menu2Bean;
+import com.bing.box.callback.OnListFragmentItemClickListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListFragmentAdapter extends RecyclerView.Adapter<ListFragmentHolder> {
+
+    private List<Menu2Bean> mDatas = new ArrayList<>();
+    private Context mContext;
+    private OnListFragmentItemClickListener clickListener;
+
+    public ListFragmentAdapter(Context context, List<Menu2Bean> datas) {
+        mContext = context;
+        mDatas = datas;
+    }
+
+    @NonNull
+    @Override
+    public ListFragmentHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        ListFragmentHolder holder = new ListFragmentHolder(
+                LayoutInflater.from(mContext).inflate(R.layout.item_fragment_list, parent, false));
+        return holder;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ListFragmentHolder holder, @SuppressLint("RecyclerView") int position) {
+        holder.getTitleText().setText(mDatas.get(position).getTitle());
+        holder.getDescText().setText(mDatas.get(position).getDesc());
+        holder.getImg().setImageResource(mDatas.get(position).getImgResId());
+        holder.getLayout().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickListener.OnItemClick(position);
+            }
+        });
+        holder.getLayout().setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        break;
+                    default:
+
+                }
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return mDatas.size();
+    }
+
+    public void setClickListener(OnListFragmentItemClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+
+}

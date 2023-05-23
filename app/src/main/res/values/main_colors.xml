@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#DD4242</color>
+    <color name="orange_pressed">#FFAC8A</color>
+    <color name="orange_default">#FFCC8A</color>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Box" parent="android:Theme">
+        <item name="android:navigationBarColor">@color/trans</item>
+        <item name="android:statusBarColor">@color/trans</item>
+    </style>
+    <style name="BoxTransparent">
+        <item name="android:windowBackground">@color/trans</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:navigationBarColor">@color/trans</item>
+        <item name="android:statusBarColor">@color/trans</item>
+    </style>
+
+    <style name="MyTabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="tabSelectedTextColor">#000</item>
+        <item name="tabTextColor">#c0c0c0</item>
+        <item name="tabIndicatorColor">#71c4b0</item>
+    </style>
+</resources>
